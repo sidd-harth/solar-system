@@ -1,0 +1,6 @@
+node_modules
+solar-system.png
+.nyc_output
+.talismanrc
+coverage
+test-results.xml

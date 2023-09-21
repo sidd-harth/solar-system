@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
+  name: solar-system
+  namespace: _{_NAMESPACE_}_
+spec:
+    rules:
+    - host: solar-system._{_INGRESS_IP_}_.nip.io
+      http:
+        paths:
+        - backend:
+            service:
+              name: solar-system
+              port:
+                number: 3000
+          path: /
+          pathType: Prefix
+    tls:
+    - hosts:
+      - solar-system._{_INGRESS_IP_}_.nip.io
+      secretName: solar-system

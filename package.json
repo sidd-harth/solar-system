@@ -1,4 +1,9 @@
 {
+  "name": "Solar System",
+  "version": "6.7.6",
+  "author": "Siddharth Barahalikar <barahalikar.siddharth@gmail.com>",
+  "homepage": "https://www.linkedin.com/in/barahalikar-siddharth/",
+  "license": "MIT",
   "scripts": {
     "start": "node app.js",
     "test": "mocha app-test.js --timeout 10000 --reporter mocha-junit-reporter --exit",
